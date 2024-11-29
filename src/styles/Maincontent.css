@@ -1,0 +1,37 @@
+/* MainContent.css */
+.main-content {
+  flex: 1;
+  background-color: #f9f9f9;
+  padding: 40px;
+  margin-left: 270px; /* Espacio para el sidebar */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  max-height: calc(100vh - 60px); /* Altura ajustada para tener en cuenta el navbar */
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f5f5f5;
+}
+
+.main-content h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.main-content p {
+  font-size: 16px;
+  color: #666;
+}
+
+.main-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.main-content::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+.main-content::-webkit-scrollbar-track {
+  background-color: #f5f5f5;
+}

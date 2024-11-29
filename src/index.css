@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ... */
+
+/* Modo Claro */
+body {
+  background-color: #ffffff;
+  color: #333; /* Color de texto oscuro */
+}
+
+/* Modo Oscuro */
+body.dark-mode {
+  background-color: #1f2937; /* Fondo oscuro */
+  color: #ffffff; /* Color de texto claro */
+}

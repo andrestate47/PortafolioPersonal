@@ -1,0 +1,112 @@
+/* Navbar.css */
+
+/* Navbar en Modo Claro (Por Defecto) */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #ffffff; /* Fondo claro */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: calc(100% - 250px); /* Ajuste de ancho para no tapar el sidebar */
+  top: 0;
+  right: 0;
+  z-index: 10;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  color: #333; /* Color de texto oscuro */
+}
+
+.navbar h1 {
+  font-size: 24px;
+  margin: 0;
+  font-weight: bold;
+  color: inherit;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  cursor: pointer;
+  font-size: 16px;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.menu li:hover {
+  color: #007bff; /* Color en hover */
+}
+
+.switch-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #007bff;
+}
+
+input:checked + .slider:before {
+  transform: translateX(18px);
+}
+
+.theme-icon {
+  font-size: 18px;
+  color: inherit; /* Hereda el color de la navbar para adaptarse al modo */
+}
+
+/* Navbar en Modo Oscuro */
+body.dark-mode .navbar {
+  background-color: #1f2937; /* Fondo oscuro */
+  color: #ffffff; /* Color de texto claro */
+}
+
+body.dark-mode .navbar h1,
+body.dark-mode .navbar .menu li,
+body.dark-mode .navbar .theme-icon {
+  color: #ffffff; /* Color de texto claro para elementos en el modo oscuro */
+}

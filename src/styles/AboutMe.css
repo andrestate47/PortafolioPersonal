@@ -1,0 +1,54 @@
+
+.aboutme-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    background-color: #f9f9f9; /* Color de fondo suave */
+    width: 100%;
+    max-width: 1200px; /* Limita el ancho máximo */
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  
+  /* Espaciado entre secciones */
+  .aboutme-container > *:not(:last-child) {
+    margin-bottom: 40px; /* Espaciado entre componentes como Hero, SkillsTable, etc. */
+  }
+  
+  /* Título principal del About Me */
+  .aboutme-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Estilos específicos para cada sección (Hero, Skills, etc.) */
+  .aboutme-section {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    padding: 20px;
+    width: 100%;
+  }
+  
+  /* Estilo para la tabla de habilidades (SkillsTable) */
+ 
+
+
+
+
+  
+  /* Responsivo */
+  @media (max-width: 768px) {
+    .aboutme-container {
+      padding: 20px;
+    }
+  
+    .aboutme-title {
+      font-size: 2em;
+    }
+  }
+  
