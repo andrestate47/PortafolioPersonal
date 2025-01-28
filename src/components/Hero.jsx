@@ -17,7 +17,7 @@ const Hero = () => {
     <section className="hero-section">
       <div className="hero-content">
         {/* Título principal */}
-        <h1 className="hero-title">¡Hola, soy[Andrés👋!]</h1>
+        <h1 className="hero-title">¡Hola, soy Andrés👋!</h1>
 
         {/* Texto dinámico con roles */}
         <div className="role">

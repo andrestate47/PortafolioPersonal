@@ -1,54 +1,144 @@
+/* Variables CSS */
+:root {
+  --primary-color: #4f46e5;
+  --secondary-color: #333333;
+  --font-size-large: 2rem;
+  --font-size-medium: 1.5rem;
+  --font-size-small: 1.2rem;
+  --font-family: 'Arial', sans-serif;
+  --background-color: #f7f7f7;
+  --text-color-light: white;
+  --text-color-dark: #333;
+  --shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  --border-radius: 10px;
+  --spacing-large: 30px;
+  --spacing-medium: 20px;
+  --spacing-small: 10px;
+}
 
+/* Contenedor General */
 .aboutme-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px;
-    background-color: #f9f9f9; /* Color de fondo suave */
-    width: 100%;
-    max-width: 1200px; /* Limita el ancho máximo */
-    margin: 0 auto;
-    box-sizing: border-box;
-  }
-  
-  /* Espaciado entre secciones */
-  .aboutme-container > *:not(:last-child) {
-    margin-bottom: 40px; /* Espaciado entre componentes como Hero, SkillsTable, etc. */
-  }
-  
-  /* Título principal del About Me */
-  .aboutme-title {
-    font-size: 2.5em;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  /* Estilos específicos para cada sección (Hero, Skills, etc.) */
-  .aboutme-section {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-    padding: 20px;
-    width: 100%;
-  }
-  
-  /* Estilo para la tabla de habilidades (SkillsTable) */
- 
+  font-family: var(--font-family);
+  display: flex;
+  flex-direction: column;
+  margin-left: 120px;
+  color: var(--secondary-color);
+}
 
+/* Hero Section */
+.hero-section {
+  position: relative;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--text-color-light);
+  overflow: hidden; /* Asegura que el video no sobresalga del contenedor */
+}
 
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta el video para ocupar todo el área */
+  z-index: -1; /* Envía el video al fondo */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Sombra suave */
+  border-bottom: 5px solid rgba(0, 0, 0, 0.5);
+}
 
+.hero-content {
+  z-index: 1; /* Asegura que el texto esté por encima del video */
+  margin: 0 auto; /* Centra el contenido */
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejorar la legibilidad */
+  padding: var(--spacing-medium);
+  border-radius: var(--border-radius);
+  max-width: 90%; /* Ajusta el ancho del texto */
+  text-align: center; /* Centra el texto */
+  color: var(--text-color-light); /* Asegura que el texto sea blanco */
+}
 
-  
-  /* Responsivo */
-  @media (max-width: 768px) {
-    .aboutme-container {
-      padding: 20px;
-    }
-  
-    .aboutme-title {
-      font-size: 2em;
-    }
+.hero-content h1 {
+  font-size: var(--font-size-large);
+  margin-bottom: var(--spacing-small);
+}
+
+.hero-content p {
+  font-size: var(--font-size-small);
+  margin-bottom: var(--spacing-small);
+}
+
+/* Body Content */
+.body-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+  padding: var(--spacing-medium);
+}
+
+.body-content h2 {
+  font-size: var(--font-size-large);
+  margin-bottom: var(--spacing-large);
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.body-content p {
+  font-size: var(--font-size-small);
+  line-height: 1.8;
+  margin-bottom: var(--spacing-large);
+}
+
+/* Bloques de información */
+.info-block {
+  margin-bottom: var(--spacing-large);
+  padding: var(--spacing-medium);
+  border-left: 4px solid var(--primary-color);
+  background-color: var(--background-color);
+  box-shadow: var(--shadow);
+}
+
+.info-block h3 {
+  font-size: var(--font-size-medium);
+  margin-bottom: var(--spacing-small);
+  color: var(--text-color-dark);
+}
+
+.info-block ul {
+  list-style-type: square;
+  padding-left: var(--spacing-medium);
+}
+
+.info-block ul li {
+  font-size: 1rem;
+  margin-bottom: var(--spacing-small);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .aboutme-container {
+    margin-left: 0;
   }
-  
+
+  .hero-content {
+    padding: var(--spacing-small);
+  }
+
+  .hero-content h1 {
+    font-size: var(--font-size-medium);
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .body-content {
+    padding: var(--spacing-small);
+  }
+
+  .info-block {
+    padding: var(--spacing-small);
+  }
+}

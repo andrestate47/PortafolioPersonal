@@ -1,13 +1,12 @@
-import React from 'react';
-import '../styles/Maincontent.css';
+import React from "react";
 
-function MainContent() {
+const MainContent = () => {
   return (
-    <main className="main-content">
-      <h2>Welcome to My Website</h2>
-      <p>You are currently viewing the home section.</p>
-    </main>
+    <div className="main-content">
+      <h1>Bienvenido a mi portafolio</h1>
+      <p>Explora mis proyectos y conoce más sobre mí.</p>
+    </div>
   );
-}
+};
 
 export default MainContent;

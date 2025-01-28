@@ -1,5 +1,3 @@
-// src/Pages/Portfolio.jsx
-
 import React from 'react';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '../components/ui/card'; 
 
@@ -9,7 +7,7 @@ function Portfolio() {
       {/* Proyecto 1 */}
       <Card>
         <CardHeader>
-          <img src="/public/images/robot.jpeg" alt="Imagen Proyecto 1" className="w-full h-40 object-cover rounded-t-lg" />
+          <img src="/public/images/robot.jpeg" alt="Imagen Proyecto 1" className="w-full h-80 object-cover rounded-t-lg" />
           <CardTitle>Proyecto 1</CardTitle>
           <CardDescription>Descripción del Proyecto 1</CardDescription>
         </CardHeader>
@@ -24,7 +22,7 @@ function Portfolio() {
       {/* Proyecto 2 */}
       <Card>
         <CardHeader>
-          <img src="/public/images/AntCapt.png" alt="Imagen Proyecto 2" className="w-full h-40 object-cover rounded-t-lg" />
+          <img src="/public/images/AntCapt.png" alt="Imagen Proyecto 2" className="w-full h-80 object-cover rounded-t-lg" />
           <CardTitle>Proyecto 2</CardTitle>
           <CardDescription>Descripción del Proyecto 2</CardDescription>
         </CardHeader>
@@ -39,7 +37,7 @@ function Portfolio() {
       {/* Proyecto 3 */}
       <Card>
         <CardHeader>
-          <img src="/public/images/galaxyTravel.png" alt="Imagen Proyecto 3" className="w-full h-40 object-cover rounded-t-lg" />
+          <img src="/public/images/galaxyTravel.png" alt="Imagen Proyecto 3" className="w-full h-80 object-cover rounded-t-lg" />
           <CardTitle>Proyecto 3</CardTitle>
           <CardDescription>Descripción del Proyecto 3</CardDescription>
         </CardHeader>
