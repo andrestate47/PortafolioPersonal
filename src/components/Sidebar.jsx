@@ -1,5 +1,5 @@
 import React from "react";
-import { FaWhatsapp, FaEnvelope, FaShoppingCart, FaInstagram, FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa"; // Solo importamos los íconos de LinkedIn, GitHub y Mail
 import "../styles/Sidebar.css";
 
 function Sidebar() {
@@ -8,32 +8,30 @@ function Sidebar() {
       <div className="avatar-container">
         <img src="/public/images/Link0.jpg" alt="Avatar" className="avatar" />
       </div>
-      <ul className="sidebar-menu">
-        <li>
-          <FaWhatsapp style={{ color: "#25D366", marginRight: "10px" }} />
-          WhatsApp
-        </li>
-        <li>
-          <FaEnvelope style={{ color: "#0072C6", marginRight: "20px" }} />
+
+      {/* Sección de botones debajo del avatar */}
+      <div className="contact-buttons">
+        <a href="mailto:email@example.com" className="contact-button mail">
+          <FaEnvelope style={{ marginRight: "10px" }} />
           Mail
-        </li>
-        <li>
-          <FaShoppingCart style={{ color: "#FF6347", marginRight: "10px" }} />
-          Cart (0)
-        </li>
-      </ul>
-      <div className="social-links">
-        <a href="#" aria-label="Instagram">
-          <FaInstagram style={{ color: "#E4405F" }} />
         </a>
-        <a href="#" aria-label="Twitter">
-          <FaTwitter style={{ color: "#1DA1F2" }} />
+        <a
+          href="https://www.linkedin.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="contact-button linkedin"
+        >
+          <FaLinkedin style={{ marginRight: "10px" }} />
+          LinkedIn
         </a>
-        <a href="#" aria-label="LinkedIn">
-          <FaLinkedin style={{ color: "#0077B5" }} />
-        </a>
-        <a href="#" aria-label="GitHub">
-          <FaGithub style={{ color: "#333" }} />
+        <a
+          href="https://github.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="contact-button github"
+        >
+          <FaGithub style={{ marginRight: "10px" }} />
+          GitHub
         </a>
       </div>
     </div>

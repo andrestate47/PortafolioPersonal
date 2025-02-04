@@ -1,0 +1,23 @@
+.dynamic-text {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+}
+
+.cursor {
+  display: inline-block;
+  width: 6px; /* Un ancho más visible para el cursor */
+  background-color: #ffffff;
+  animation: blink 0.8s infinite; /* Añadimos la animación de parpadeo */
+  margin-left: 5px; /* Opcional: para darle un pequeño espacio entre el texto y el cursor */
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1; /* El cursor es visible */
+  }
+  50% {
+    opacity: 0; /* El cursor desaparece */
+  }
+}

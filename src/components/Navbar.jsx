@@ -5,10 +5,10 @@ import { Link } from "react-router-dom";
 
 function Navbar({ toggleDarkMode, darkMode }) {
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${darkMode ? 'dark-mode' : ''}`}>
       <h1>Mi sitio web🌐</h1>
       <ul className="menu">
-        <li><Link to="/about-me">About Me</Link></li> {/* Enlace funcional */}
+        <li><Link to="/about-me">About Me</Link></li>
         <li><Link to="/portfolio">Portfolio</Link></li>
         <li><Link to="/contact">Contact</Link></li>
         <li><Link to="/blog">Blog</Link></li>

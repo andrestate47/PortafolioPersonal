@@ -1,0 +1,117 @@
+/* Estilos generales */
+.portfolio-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Sección de colaboración */
+.collaboration-section {
+  background-color: #f8f9fa;
+  padding: 30px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.collaboration-section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.collaboration-section p {
+  font-size: 18px;
+  color: #555;
+}
+
+.contact-btn {
+  background-color: #ff6600;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+  background-color: #e65c00;
+}
+
+/* Contenedor de proyectos */
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Filas de proyectos */
+.project-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-row.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Efecto hover en los proyectos */
+.project-row:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Imagen del proyecto */
+.project-image img {
+  width: 200px; /* Reducimos tamaño */
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Descripción del proyecto */
+.project-description {
+  max-width: 400px;
+  text-align: left;
+}
+
+.project-description h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.project-description p {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .project-row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .project-row.reverse {
+    flex-direction: column;
+  }
+
+  .project-image img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .project-description {
+    max-width: 100%;
+  }
+}
