@@ -37,19 +37,19 @@ const projects = [
     title: 'Proyecto 1',
     description: 'Descripción del Proyecto 1',
     details: 'Detalles del proyecto 1 aquí.',
-    image: '/images/robot.jpeg',
+    image: `${import.meta.env.BASE_URL}images/robot.jpeg`,
   },
   {
     title: 'Proyecto 2',
     description: 'Descripción del Proyecto 2',
     details: 'Detalles del proyecto 2 aquí.',
-    image: '/images/AntCapt.png',
+    image: `${import.meta.env.BASE_URL}images/AntCapt.png`,
   },
   {
     title: 'Proyecto 3',
     description: 'Descripción del Proyecto 3',
     details: 'Detalles del proyecto 3 aquí.',
-    image: '/images/galaxyTravel.png',
+    image: `${import.meta.env.BASE_URL}images/galaxyTravel.png`,
   },
   {
     title: 'Proyecto 4',

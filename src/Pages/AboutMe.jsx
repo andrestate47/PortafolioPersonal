@@ -15,7 +15,7 @@ function AboutMe() {
         </div>
         <video
           className="hero-video"
-          src="/public/images/0_Abstract_Technology_1080x1080.mp4"
+          src= {`${import.meta.env.BASE_URL}images/0_Abstract_Technology_1080x1080.mp4`}
           autoPlay
           loop
           muted

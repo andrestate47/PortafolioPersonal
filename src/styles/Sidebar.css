@@ -71,7 +71,7 @@
 
 .contact-button:hover {
   background-color: #FF7300; /* Fondo más claro al pasar el ratón */
-  border-color: #8d8181; /* Añadimos un borde blanco al pasar el ratón */
+  border-color: #f8f2f2; /* Añadimos un borde blanco al pasar el ratón */
 }
 
 /* Estilos específicos para cada botón */

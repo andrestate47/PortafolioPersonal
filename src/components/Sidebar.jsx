@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"; 
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa"; // Solo importamos los íconos de LinkedIn, GitHub y Mail
 import "../styles/Sidebar.css";
 
@@ -6,17 +7,17 @@ function Sidebar() {
   return (
     <div className="sidebar">
       <div className="avatar-container">
-        <img src="/public/images/Link0.jpg" alt="Avatar" className="avatar" />
+        <img src={`${import.meta.env.BASE_URL}images/Link0.jpg`} alt="Avatar" className="avatar" />
       </div>
 
       {/* Sección de botones debajo del avatar */}
       <div className="contact-buttons">
-        <a href="mailto:email@example.com" className="contact-button mail">
+      <Link to="/contact" className="contact-button mail">
           <FaEnvelope style={{ marginRight: "10px" }} />
           Mail
-        </a>
+        </Link>
         <a
-          href="https://www.linkedin.com"
+          href="https://www.linkedin.com/in/andres-figueroa-024878232/"
           target="_blank"
           rel="noopener noreferrer"
           className="contact-button linkedin"
@@ -25,7 +26,7 @@ function Sidebar() {
           LinkedIn
         </a>
         <a
-          href="https://github.com"
+          href="https://github.com/andrestate47"
           target="_blank"
           rel="noopener noreferrer"
           className="contact-button github"
