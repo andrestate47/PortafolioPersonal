@@ -1,9 +1,11 @@
-/* Estilos generales */
+/* Contenedor principal */
 .portfolio-container {
   max-width: 900px;
   margin: 0 auto;
   padding: 20px;
   text-align: center;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
 }
 
 /* Sección de colaboración */
@@ -18,22 +20,24 @@
 .collaboration-section h2 {
   font-size: 24px;
   margin-bottom: 10px;
+  font-weight: 600;
 }
 
 .collaboration-section p {
   font-size: 18px;
   color: #555;
+  margin-bottom: 20px;
 }
 
 .contact-btn {
   background-color: #ff6600;
   color: white;
-  padding: 10px 20px;
+  padding: 12px 24px;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
   font-size: 16px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .contact-btn:hover {
@@ -42,76 +46,70 @@
 
 /* Contenedor de proyectos */
 .projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+/* Card del proyecto */
+.project-card {
+  background-color: #fff;
+  border: 2px double #ddd; /* Borde doble y color gris claro */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  
+  /* Ajuste de la transición */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-}
-
-/* Filas de proyectos */
-.project-row {
-  display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding-bottom: 20px;
 }
 
-.project-row.reverse {
-  flex-direction: row-reverse;
-}
-
-/* Efecto hover en los proyectos */
-.project-row:hover {
-  transform: translateY(-5px);
+/* Efecto hover */
+.project-card:hover {
+  transform: translateY(-4px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  border-color: #bbb; /* Cambia ligeramente el color del borde al hacer hover */
 }
 
-/* Imagen del proyecto */
-.project-image img {
-  width: 200px; /* Reducimos tamaño */
-  height: auto;
-  border-radius: 8px;
+/* Imagen cuadrada */
+.project-card img {
+  width: 100%;
+  height: 250px;
   object-fit: cover;
+  border-bottom: 2px double #ddd; /* Coincide con el estilo del borde principal */
 }
 
 /* Descripción del proyecto */
 .project-description {
-  max-width: 400px;
-  text-align: left;
+  padding: 15px;
+  text-align: center;
 }
 
 .project-description h3 {
   font-size: 20px;
-  margin-bottom: 5px;
+  font-weight: 600;
+  margin-bottom: 8px;
 }
 
 .project-description p {
   font-size: 16px;
   color: #444;
   line-height: 1.5;
+  margin-bottom: 10px;
 }
 
-/* Responsividad */
+/* Responsivo */
 @media (max-width: 768px) {
-  .project-row {
-    flex-direction: column;
-    text-align: center;
+  .projects-container {
+    grid-template-columns: 1fr;
   }
 
-  .project-row.reverse {
-    flex-direction: column;
-  }
-
-  .project-image img {
-    width: 100%;
-    max-width: 300px;
-  }
-
-  .project-description {
-    max-width: 100%;
+  .project-card img {
+    height: 200px;
   }
 }

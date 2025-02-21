@@ -1,4 +1,4 @@
-/* Sidebar.css */
+/* Estilos base del sidebar */
 .sidebar {
   width: 200px;
   background-color: #ffffff;
@@ -11,20 +11,40 @@
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 5;
+  z-index: 1000;
   transform: translateX(-100%);
-  animation: slideIn 0.5s forwards;
-  justify-content: space-between;
-  max-width: 300px;
-  min-width: 200px;
+  transition: transform 0.3s ease-in-out;
 }
 
-@keyframes slideIn {
-  to {
-    transform: translateX(0);
+/* Mostrar sidebar cuando está abierto */
+.sidebar.open {
+  transform: translateX(0);
+}
+
+/* Botón de menú (hamburguesa) */
+.menu-toggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1100;
+  color: #ff7300;
+}
+
+/* Hacer el sidebar fijo en pantallas grandes */
+@media (min-width: 1024px) {
+  .menu-toggle {
+    display: none; /* Ocultamos el botón en pantallas grandes */
+  }
+  .sidebar {
+    transform: translateX(0); /* Siempre visible */
   }
 }
 
+/* Estilos del avatar */
 .avatar-container {
   margin-bottom: 20px;
 }
@@ -36,97 +56,45 @@
   border: 4px solid #ff7300;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   object-fit: cover;
-  transition: transform 0.9s ease;
+  transition: transform 0.3s ease;
 }
 
 .avatar:hover {
   transform: scale(1.05);
 }
+
 /* Sección de botones de contacto */
 .contact-buttons {
   display: flex;
   flex-direction: column;
-  gap: 15px; /* Espacio entre los botones */
+  gap: 15px;
   width: 100%;
 }
 
-/* Estilo para los botones */
 .contact-button {
   display: flex;
   align-items: center;
-  gap: 10px; /* Espacio entre el icono y el texto */
-  background-color: #0077b5; /* Color de fondo */
+  gap: 10px;
+  background-color: #0077b5;
   color: white;
   padding: 5px 10px;
   border-radius: 8px;
   font-size: 1rem;
   font-weight: bold;
-  border: none;
-  cursor: pointer;
   text-decoration: none;
   transition: background 0.3s;
-  width: 155px; /* Define un ancho fijo */
+  width: 155px;
   height: 50px;
 }
 
 .contact-button:hover {
-  background-color: #FF7300; /* Fondo más claro al pasar el ratón */
-  border-color: #f8f2f2; /* Añadimos un borde blanco al pasar el ratón */
+  background-color: #FF7300;
 }
 
-/* Estilos específicos para cada botón */
-.mail {
-  background-color: #555;
-}
-
-.linkedin {
-  background-color: #555
-}
-
-.github {
-  background-color: #333;
-}
+.mail { background-color: #555; }
+.linkedin { background-color: #555; }
+.github { background-color: #333; }
 
 .contact-button svg {
   margin-right: 10px; 
 }
-
-.sidebar-menu {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  text-align: center;
-}
-
-.sidebar-menu li {
-  margin: 25px 0;
-  font-size: 17px;
-  color: #000000;
-  display: flex;
-  align-items: center;
-  justify-content:center;
-  transition: color 0.3s ease;
-}
-
-.sidebar-menu li:hover {
-  color: #ff7300;
-}
-
-.social-links {
-  margin-top: 150px;
-  display: flex;
-  gap: 10px;
-}
-
-.social-links a {
-  font-size: 24px;
-  transition: opacity 0.3s ease;
-  color: inherit;
-}
-
-.social-links a:hover {
-  opacity: 0.7;
-}
-
-

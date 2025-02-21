@@ -34,28 +34,28 @@ function Portfolio() {
 
 const projects = [
   {
-    title: 'Proyecto 1',
-    description: 'Descripción del Proyecto 1',
-    details: 'Detalles del proyecto 1 aquí.',
-    image: `${import.meta.env.BASE_URL}images/robot.jpeg`,
+    title: 'LandingPage de servicios IT',
+    description: 'landingpage dedicada a la venta de servicios it',
+    details: 'Reactjs, TypeScript, CSS3',
+    image: `${import.meta.env.BASE_URL}images/ladingp1.png`
   },
   {
-    title: 'Proyecto 2',
-    description: 'Descripción del Proyecto 2',
-    details: 'Detalles del proyecto 2 aquí.',
+    title: 'Pagina web',
+    description: 'Pagina web dedicada a la venta de cursos financieron on-line',
+    details: 'Wordpres, Elementor',
     image: `${import.meta.env.BASE_URL}images/AntCapt.png`,
   },
   {
-    title: 'Proyecto 3',
-    description: 'Descripción del Proyecto 3',
-    details: 'Detalles del proyecto 3 aquí.',
+    title: 'Pagina web informativa',
+    description: 'Pagina web orientada a la venta de viajes espaciales ',
+    details: 'HTML5, CSS3, JavaScript',
     image: `${import.meta.env.BASE_URL}images/galaxyTravel.png`,
   },
   {
-    title: 'Proyecto 4',
-    description: 'Descripción del Proyecto 4',
-    details: 'Detalles del proyecto 4 aquí.',
-    image: 'https://via.placeholder.com/150',
+    title: 'LandingPage personal',
+    description: 'Landingp ',
+    details: 'nextjs, tailwindcss',
+    image: `${import.meta.env.BASE_URL}images/landingp2.png`
   },
 ];
 
